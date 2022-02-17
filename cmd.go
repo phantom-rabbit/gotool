@@ -43,3 +43,25 @@ func main() {
 		return
 	}
 }
+
+package main
+
+import (
+	"github.com/urfave/cli/v2"
+)
+
+var erasureSetCmd = &cli.Command{
+	Name:  "time-epoch",
+	Usage: "Make time transform epoch",
+	Flags: []cli.Flag{
+		&cli.StringFlag{
+			Name:  "time",
+			Usage: "time format e.g 2006-01-02 15:04:05",
+		},
+	},
+	Action: func(cctx *cli.Context) error {
+
+		return nil
+	},
+}
+
